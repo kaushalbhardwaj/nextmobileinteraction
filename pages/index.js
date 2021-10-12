@@ -1,5 +1,9 @@
 import Head from "next/head";
 
+function receiveData(data) {
+  console.log("received data", data);
+}
+
 export default function Home() {
   return (
     <div className="container">
@@ -10,7 +14,7 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome <a href="https://nextjs.org">Darkwolve</a>
         </h1>
       </main>
 
