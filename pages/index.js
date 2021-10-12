@@ -1,10 +1,15 @@
 import Head from "next/head";
-
-function receiveData(data) {
-  console.log("received data", data);
-}
+import React, { useState, useEffect } from "react";
 
 export default function Home() {
+  function receiveData(data) {
+    window.alert("received data-".concat(data));
+    console.log("received data", data);
+  }
+  useEffect(() => {
+    receiveData("kaushal");
+  });
+
   return (
     <div className="container">
       <Head>
