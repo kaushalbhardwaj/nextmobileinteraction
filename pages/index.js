@@ -6,9 +6,6 @@ export default function Home() {
     window.alert("received data-".concat(data));
     console.log("received data", data);
   }
-  useEffect(() => {
-    receiveData("kaushal");
-  });
 
   return (
     <div className="container">
