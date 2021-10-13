@@ -1,18 +1,24 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
+import Script from "next/script";
 
 export default function Home() {
-  function receiveData(data) {
-    window.alert("received data-".concat(data));
-    console.log("received data", data);
-  }
-
   return (
     <div className="container">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Script
+        id="show-banner"
+        dangerouslySetInnerHTML={{
+          __html: `function receiveData(data) {
+              console.log("received data", data);
+              window.alert("data--".concat(data));
+            }`,
+        }}
+      />
 
       <main>
         <h1 className="title">
