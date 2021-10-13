@@ -2,6 +2,16 @@ import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import Script from "next/script";
 
+function callAnd() {
+  var testVal = "Привет от Android Tools!";
+  AndroidFunction.showToast(testVal);
+}
+
+const handleClick = (e) => {
+  var testVal = "Привет от Android Tools!";
+  AndroidFunction.showToast(testVal);
+};
+
 export default function Home() {
   return (
     <div className="container">
@@ -24,6 +34,8 @@ export default function Home() {
         <h1 className="title">
           Welcome <a href="https://nextjs.org">Darkwolve</a>
         </h1>
+
+        <button onClick={handleClick}>Add</button>
       </main>
 
       <footer>
